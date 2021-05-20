@@ -7,8 +7,7 @@ module.exports = {
     proxy: {
       '^/api': {
         target: 'https://campus.gkzhb.top',
-        changeOrigin: true,
-        pathRewrite: {'^/api/': '/'}
+        changeOrigin: true
       }
     }
   }

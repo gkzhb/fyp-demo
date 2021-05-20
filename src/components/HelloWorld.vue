@@ -83,12 +83,19 @@
               <v-card-text>Successful Rate: {{result.sr.toFixed(2)}}%</v-card-text>
               <v-card-text>Averaged L2 Distance: {{result.averDist.toFixed(2)}}</v-card-text>
               <v-card-text>Averaged Number of Iterations: {{result.averIter.toFixed(2)}}</v-card-text>
-              <v-img
-                :src="'data:image/png;base64,' + result.image"
-                width="100%"
-                max-height="50%"
-                contain
-              />
+              <v-card-text>
+              <v-row
+                width="80%"
+                class="d-flex justify-center"
+              >
+                <v-col style="max-width: 50%;">
+                  <img
+                    :src="'data:image/png;base64,' + result.image"
+                    width="80%"
+                  />
+                </v-col>
+              </v-row>
+              </v-card-text>
               <v-card-actions>
                 <v-spacer></v-spacer>
                 <v-btn
@@ -191,7 +198,8 @@ export default {
           this.errorMessage = resp.statusText;
           this.showMessage = true;
         });
-        /* this.result = TEST_RESULT;
+        /*
+        this.result = TEST_RESULT;
         this.waiting = false;
         this.isResult = true;
         */
