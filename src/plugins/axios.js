@@ -3,14 +3,14 @@
 import Vue from 'vue';
 import axios from "axios";
 
-// import { BASE_URL } from "../utils/config";
+import { BASE_URL } from "../utils/config";
 
 // Full config:  https://github.com/axios/axios#request-config
 // axios.defaults.baseURL = process.env.baseURL || process.env.apiUrl || '';
 // axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
 // axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post["Content-Type"] = "application/json;charset=UTF-8";
-// axios.defaults.baseURL = BASE_URL;
+axios.defaults.baseURL = BASE_URL;
 
 let config = {
   // baseURL: process.env.baseURL || process.env.apiUrl || ""
