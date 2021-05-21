@@ -43,9 +43,7 @@
             <v-col>
               <v-text-field
                 v-model="target"
-                :rules="[v => !!v || '请输入攻击的目标文字']"
                 label="目标文字 Target"
-                required
               />
             </v-col>
             <v-col>
